@@ -14,4 +14,5 @@ abstract class CoinpaymentsCommand {
     const GET_CALLBACK_ADDRESS = 'get_callback_address';
     const BALANCES = 'balances';
     const RATES = 'rates';
+    const GET_PBN_INFO = 'get_pbn_info';
 }
