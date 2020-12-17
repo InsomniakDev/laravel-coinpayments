@@ -370,9 +370,23 @@ class Coinpayments
      * @throws JsonParseException
      * @throws MessageSendException
      */
-    public function getPBNInfo ()
+    public function getBasicInfo ()
     {
-        return $this->apiCall(CoinpaymentsCommand::GET_PBN_INFO, ['merchant' => $this->merchant_id]);
+        return $this->apiCall(CoinpaymentsCommand::GET_BASIC_INFO);
+    }
+
+    /**
+     * Gets the merchant profile by tag.
+     *
+     * @param $pbntag string
+     * @return array|mixed
+     * @throws CoinPaymentsException
+     * @throws JsonParseException
+     * @throws MessageSendException
+     */
+    public function getPBNInfo ($pbntag)
+    {
+        return $this->apiCall(CoinpaymentsCommand::GET_PBN_INFO, ['pbntag' => $pbntag]);
     }
 
     /**

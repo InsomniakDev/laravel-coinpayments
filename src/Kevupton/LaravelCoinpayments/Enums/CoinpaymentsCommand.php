@@ -15,4 +15,5 @@ abstract class CoinpaymentsCommand {
     const BALANCES = 'balances';
     const RATES = 'rates';
     const GET_PBN_INFO = 'get_pbn_info';
+    const GET_BASIC_INFO = 'get_basic_info';
 }
